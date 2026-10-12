@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#050505" />
+  <meta property="og:type" content="website" />
+  <meta name="description" content="Choose a strange little soul for Meta Muse." />
+  <meta property="og:title" content="Muse Souls — Choose your soul" />
+  <meta property="og:description" content="Choose your soul." />
+  <title>Muse Souls — Choose your soul</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#souls">Skip to souls</a>
+
+  <main>
+    <header class="title-screen">
+      <h1>CHOOSE YOUR SOUL</h1>
+      <p class="gallery-intro">Curated personalities for your Meta Muse assistant. Choose one to meet the character and try it out.</p>
+      <nav class="gallery-nav" aria-label="About this project">
+        <a href="about.html">WHAT IS THIS? ↗</a>
+        <a href="https://github.com/bkawa-io/muse-souls" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+      </nav>
+    </header>
+
+    <section class="soul-grid" id="souls" aria-label="Choose a soul"></section>
+
+    <footer class="site-footer"><span>An unofficial little menagerie for Muse.</span></footer>
+  </main>
+
+  <dialog class="soul-dialog" id="soul-dialog" aria-labelledby="dialog-name">
+    <div class="dialog-frame">
+      <button class="dialog-close" type="button" data-close aria-label="Go back">×</button>
+
+      <div id="dialog-detail-view" class="detail-view">
+        <div class="detail-art">
+          <img id="dialog-art" alt="" />
+          <div class="detail-art-fallback" id="dialog-art-fallback" aria-hidden="true"></div>
+        </div>
+
+        <div class="detail-copy">
+          <h2 id="dialog-name"></h2>
+          <p class="detail-vibe" id="dialog-vibe"></p>
+          <div class="dialog-actions detail-primary-actions">
+            <button class="menu-button primary" type="button" id="accept-soul">TRY IT OUT</button>
+            <button class="menu-button" type="button" data-close>GO BACK</button>
+          </div>
+
+          <p class="detail-description" id="dialog-description"></p>
+
+          <div class="voice-sample">
+            <p id="dialog-voice" class="sample-quote"></p>
+          </div>
+
+          <nav class="detail-links" aria-label="Review this character's files">
+            <a class="inspect-link" id="inspect-soul" href="#" target="_blank" rel="noopener noreferrer">READ FULL SOUL.md ↗</a>
+            <a class="inspect-link" id="inspect-identity" href="#" target="_blank" rel="noopener noreferrer">IDENTITY.md ↗</a>
+            <a class="inspect-link" id="inspect-names" href="#" target="_blank" rel="noopener noreferrer">NAMES.md ↗</a>
+            <a class="inspect-link" id="inspect-avatar" href="#" target="_blank" rel="noopener noreferrer">AVATAR ↗</a>
+          </nav>
+        </div>
+      </div>
+
+      <div id="dialog-choice-view" class="choice-view" hidden>
+        <h2 id="choice-title"></h2>
+        <p class="choice-copy">Copy and paste these instructions into Muse.</p>
+        <div class="choice-copy-actions">
+          <button class="menu-button primary" type="button" id="copy-invitation">COPY INSTRUCTIONS FOR MUSE</button>
+          <p class="copy-status" id="copy-status" aria-live="polite"></p>
+        </div>
+        <textarea id="invitation-prompt" class="invitation-prompt" readonly rows="12" aria-label="Instructions to copy into Muse"></textarea>
+
+        <div class="what-it-does">
+          <h3>WHAT THIS DOES</h3>
+          <p>This asks Muse to review this character's <code>SOUL.md</code> and propose how to use it. <strong>Nothing changes just by copying.</strong> Muse must ask before editing, and verify backups of your existing soul and identity files before applying an approved change. A new name or avatar needs separate approval.</p>
+          <p>Changed your mind? The process is designed to be reversible using those backups, provided they can be restored.</p>
+        </div>
+
+        <div class="choice-asset">
+          <img id="choice-avatar" src="" alt="" />
+          <div class="choice-asset-copy">
+            <p class="pledge-label">THE PORTRAIT</p>
+            <p>This image is a visual reference. Muse may generate a matching avatar only if you approve, and must show you the result before setting it.</p>
+            <a id="download-avatar" href="#" target="_blank" rel="noopener noreferrer">VIEW AVATAR REFERENCE ↗</a>
+            <a id="view-character-files" href="#" target="_blank" rel="noopener noreferrer">VIEW CHARACTER FILES ↗</a>
+          </div>
+        </div>
+        <div class="dialog-actions choice-back-action">
+          <button class="menu-button" type="button" id="choose-another">CHOOSE ANOTHER</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
