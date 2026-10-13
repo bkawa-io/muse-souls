@@ -1,10 +1,11 @@
+
 # Muse Souls
 
 *A menagerie of strange little personalities for Meta Muse.*
 
 **[Choose your soul](https://bkawa-io.github.io/muse-souls)**
 
-<img width="475" height="469" alt="Screenshot 2026-10-12 at 1 43 20 PM" src="https://github.com/user-attachments/assets/3e94c7e5-0dc6-49db-aaa1-d0b01462c926" />
+<img width="627" height="311" alt="Screenshot 2026-10-12 at 5 10 53 PM" src="https://github.com/user-attachments/assets/0b8562a5-7bbf-434b-9366-4c9e252c134a" />
 
 Nine characters with their own `SOUL.md`, `IDENTITY.md`, `NAMES.md` and artwork. They are all unique, fun, and dear-to-my-heart strange little guys that I personally created. A project for people who want their assistant to feel a little less like the usual corporate happy-bot.
 
